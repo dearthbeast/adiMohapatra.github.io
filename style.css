@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  background: transparent;
+  color: #186765;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+#live-bg {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+  background: linear-gradient(120deg, #e4ffef 0%, #aef1ef 100%);
+  animation: bgmove 12s infinite alternate;
+}
+@keyframes bgmove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100vw 100vh; }
+}
+header {
+  padding: 2rem 0;
+  background: rgba(164, 255, 209, 0.3);
+  text-align: center;
+}
+h1 {
+  color: #12e09b;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+nav a {
+  color: #159a92;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #12e09b;
+}
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+section {
+  margin-bottom: 2rem;
+  background: rgba(164, 255, 209, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+section h2 {
+  color: #1bdba8;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 0.5rem 0;
+  background: #f4fff9;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+input, button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #acffe0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+button {
+  background-color: #12e09b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+}
+button:hover {
+  background-color: #159a92;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(234, 255, 245, 0.5);
+  color: #186765;
+}
+@media (max-width: 700px) {
+  main { max-width: 95vw; }
+  header { font-size: smaller; }
+}
